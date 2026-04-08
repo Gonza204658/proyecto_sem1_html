@@ -4,43 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOBRE MÍ</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1 style= "text-align: center;">DIEGO FERNANDO GONZALEZ HENRIQUEZ</h1>
-    <nav>
+    <nav> <!--aqui encerramos toda una lista en nav para navegar dentro de la misma pagina,
+        lo que hacemos es dividirlo por secciones y cuando le seleccione ahi te manda a esa seccion-->
     <ul>
-        <li><a href="#SOBRE_MÍ">SOBRE DIEGO</a></li>
-        <li><a href="mascotas.html">CONOCE MIS MASCOTAS</a></li>
-        <li><a href="#CONTACTAME">CONTACTANOS</a></li>
+        <li><a href="#SOBRE_MÍ" title="seccion Sobre mi" class="navegar">SOBRE DIEGO</a></li>
+        <li><a href="mascotas.html" class="navegar">CONOCE MIS MASCOTAS</a></li>
+        <li><a href="#PROYECTOS" class="navegar">MIS PROYECTOS</a></li>
+        <li><a href="#CONTACTAME" class="navegar">CONTACTANOS</a></li>
     </ul>
     </nav>
+<!--
+En la linea 10 usamos la etiqueta "Style" y le damos el atributo de text-aling y lo colocamos en center
+para centrar el texto que tengamos ahí
 
-    <section id="#SOBRE_MÍ">
+en la linea 13 usamos "href" para llamar a la otra pagina o con "#" le asignamos como un id a esa seccion, donde vamos a poder navegar hacia la otra pagina
+y usamos "class" para seleccionar un elmento a modificar para CSS agregarle color 
+-->
+
+
+    <section id="#SOBRE_MÍ"> <!--aqui la unimos la seccion de arriba, lo llamamos con "id" y cuando este seleccione esa opcion lo mandará para aca-->
         <h2 style="text-align: center;"><b>UN POCO SOBRE MÍ</b></h2>
-        <p style="text-align: center;">
-            Mi nombre es <b>Diego Fernando Gonzalez Henriquez</b>, tengo actualmente 19 años,
-            estoy estudiando en la <b>Universidad de la Costa</b> Ingeniería Industrial, voy en 5 semestre,
-            también hago parte de una capacitación donde estudio <b>Desarrollo de software</b>.
+        <!--Aqui usamos el title para cuando el usuario pase el mause por la imagen salga un breve comentario de lo que es esa imagen-->
+        <p class="texto"> <!--aqui centramos el texto-->
+            Mi nombre es <samp>Diego Fernando Gonzalez Henriquez</samp>, tengo actualmente 19 años,
+            estoy estudiando en la <samp>Universidad de la Costa</samp> Ingeniería Industrial, voy en 5 semestre,
+            también hago parte de una capacitación donde estudio <samp>Desarrollo de software</samp>.
             Me considero una persona responsable, con muchas ganas de salir adelante y seguir aprendiendo cada día.
             Además, me encanta el deporte, ya que me ayuda a mantenerme activo, disciplinado y enfocado en mis metas.
             Siempre estoy buscando crecer tanto a nivel personal como profesional, enfrentando nuevos retos que me permitan mejorar mis habilidades. 
-        </p>
+        </p></section>
+        <img src="imagenes/WhatsApp Image 2026-04-07 at 8.56.02 PM.jpeg" alt="Una Foto del creador" title="Una foto del creador">
+
+        <section id="#PROYECTOS"> <!--lo metemos dentro de una seccion para que pueda servir el nav-->
+            <h2> <b>MIS PROYECTOS</b></h2>
+            <ul>
+                <li><a href=>pollos</a></li>
+
+
+            </ul>
+        </section>
+
+
+
 
         <section id="#CONTACTAME">
             <h2>CONTACTANOS</h2>
             <form action="">
-                <label for=""><input type="text">NOMBRE  </label>
-                <br><label for=""><input type="text">  TELEFONO  </label>              
-
-
+                <label for=""> <b>NOMBRE</b><input type="text" name="name" placeholder="Escribe tu nombre" required ></label>
+                <br><label for=""> <br><b>TELEFONO</b> <input type="tel" pattern="[0-9]+" name="Telefono1" placeholder="ej 3002666030" required minlength="10"></label>
+                <br><label for=""> <br><b>CORREO</b> <input type="email" name="Correo" placeholder="ej correo@gmail.com " required></label>    
+                <br><h3><b>Seleccione una opcion donde podamos contactarlo</b></h3>
+                <label for=""> <input type="radio" name="Contacto" required><b>Correo</b></label>
+                <label for=""> <input type="radio" name="Contacto" required> <b>Telefono</b></label>
+                <br>
+                <br><label for=""><b>FECHA DE NACIMIENTO</b> <br><input type="date" name="fecha" required></label>
+                <br>
+                <br><label for=""><input type="submit" name="enviar"></label>
             </form>
 
-
-
+            <!--Aqui usamos el "label" que es para nombrar lo que coloquemos en el input unicamente
+            #required minlength="10" lo usamos para limitar una cantidad de caracteres
+            #placeholder="ej correo@gmail.com para comentar un campo de un input, que cuando escribamos le salga como un comentario
+            #pattern="[0-9]+" esto para que ingrese solo numeros
+            #requiered es para que no envien datos vacios, le dice que es un campo obligatorio
+            -->
         </section>
-
-
-    </section>
 
 
 </body>
