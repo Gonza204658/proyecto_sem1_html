@@ -7,78 +7,97 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        
-        <h1>DIEGO FERNANDO GONZALEZ HENRIQUEZ</h1>
-    
-    </div>
-    <nav> <!--aqui encerramos toda una lista en nav para navegar dentro de la misma pagina,
-        lo que hacemos es dividirlo por secciones y cuando le seleccione ahi te manda a esa seccion-->
-    <ul>
-        <li><a href="#SOBRE_MÍ" title="seccion Sobre mi" class="navegar">SOBRE DIEGO</a></li>
-        <li><a href="mascotas.html" class="navegar">CONOCE MIS MASCOTAS</a></li>
-        <li><a href="#PROYECTOS" class="navegar">MIS PROYECTOS</a></li>
-        <li><a href="#CONTACTAME" class="navegar">CONTACTANOS</a></li>
-    </ul>
-    </nav>
-<!--
-En la linea 10 usamos la etiqueta "Style" y le damos el atributo de text-aling y lo colocamos en center
-para centrar el texto que tengamos ahí
 
-en la linea 13 usamos "href" para llamar a la otra pagina o con "#" le asignamos como un id a esa seccion, donde vamos a poder navegar hacia la otra pagina
-y usamos "class" para seleccionar un elmento a modificar para CSS agregarle color 
--->
+    <header class="header"> 
+        <div class="logo"> 
+            <img src="imagenes/WhatsApp Image 2026-04-07 at 8.56.02 PM.jpeg" alt="" class="imagen">
+        </div>
+
+        <nav>
+        <ul class="nav_links">
+            <li><a href="#SOBRE_MÍ" title="seccion Sobre mi" class="navegar">SOBRE DIEGO</a></li>
+            <li><a href="mascotas.html" class="navegar">CONOCE MIS MASCOTAS</a></li>
+            <li><a href="#PROYECTOS" class="navegar">MIS PROYECTOS</a></li>
+            <a href="index.html" style="text-align: center;">VOLVER AL INICIO</a>
+        </ul>
+    </nav>
+    <a href="#CONTACTAME" class="navegar"><button>CONTACTANOS</button></a>
+
+    </header>
+
+    <div>
+        <h1>DIEGO FERNANDO GONZALEZ HENRIQUEZ</h1>
+    </div>
 
     <div class="cuadro_de_mi">
-    <section id="#SOBRE_MÍ"> <!--aqui la unimos la seccion de arriba, lo llamamos con "id" y cuando este seleccione esa opcion lo mandará para aca-->
-        <h2 class="texto"><strong>UN POCO SOBRE MÍ</strong></h2>
-        <!--Aqui usamos el title para cuando el usuario pase el mause por la imagen salga un breve comentario de lo que es esa imagen-->
-        <p class="texto texto1"> <!--aqui centramos el texto-->
-            Mi nombre es <samp>Diego Fernando Gonzalez Henriquez</samp>, tengo actualmente 19 años,
-            estoy estudiando en la <samp>Universidad de la Costa</samp> Ingeniería Industrial, voy en 5 semestre,
-            también hago parte de una capacitación donde estudio <samp>Desarrollo de software</samp>.
-            Me considero una persona responsable, con muchas ganas de salir adelante y seguir aprendiendo cada día.
-            Además, me encanta el deporte, ya que me ayuda a mantenerme activo, disciplinado y enfocado en mis metas.
-            Siempre estoy buscando crecer tanto a nivel personal como profesional, enfrentando nuevos retos que me permitan mejorar mis habilidades. 
-        </p></section>
-        </div>
-        <img src="imagenes/WhatsApp Image 2026-04-07 at 8.56.02 PM.jpeg" alt="Una Foto del creador" title="Una foto del creador" class="imagen">
+        <section id="SOBRE_MÍ">
+            <h2 class="texto"><strong>UN POCO SOBRE MÍ</strong></h2>
 
-        <section id="#PROYECTOS"> <!--lo metemos dentro de una seccion para que pueda servir el nav-->
-            <h2> <strong>MIS PROYECTOS</strong></h2>
-            <ul class="referencias">
-                <li><a href=>pollos</a></li>
-
-
-            </ul>
+            <p class="texto texto1">
+                Mi nombre es <strong>Diego Fernando Gonzalez Henriquez</strong>, tengo actualmente 19 años,
+                estoy estudiando en la <strong>Universidad de la Costa</strong> Ingeniería Industrial, voy en 5 semestre,
+                también hago parte de una capacitación donde estudio <strong>Desarrollo de software</strong>.
+                Me considero una persona responsable, con muchas ganas de salir adelante y seguir aprendiendo cada día.
+                Además, me encanta el deporte, ya que me ayuda a mantenerme activo, disciplinado y enfocado en mis metas.
+                Siempre estoy buscando crecer tanto a nivel personal como profesional, enfrentando nuevos retos que me permitan mejorar mis habilidades. 
+            </p>
         </section>
+    </div>
 
+    <img src="imagenes/WhatsApp Image 2026-04-07 at 8.56.02 PM.jpeg" alt="Una Foto del creador" title="Una foto del creador" class="imagen">
 
-        <div class="FOR">
-        <section id="#CONTACTAME" class="formulario">
+    <section id="PROYECTOS">
+        <h2><strong>MIS PROYECTOS</strong></h2>
+        <ul class="referencias">
+            <li><a href="pollos.html">pollos</a></li>
+        </ul>
+    </section>
+
+    <div class="FOR">
+        <section id="CONTACTAME" class="formulario">
             <h2 class="contactame">CONTACTANOS</h2>
-           
-            <form action="" class="formulario">
-                <label for=""> <b>NOMBRE</b><input type="text" name="name" placeholder="Escribe tu nombre" required class="formulario_input" ></label>
-                <br><label for=""> <br><b>TELEFONO</b> <input type="tel" pattern="[0-9]+" name="Telefono1" placeholder="ej 3002666030" required minlength="10" class="formulario_input"></label>
-                <br><label for=""> <br><b>CORREO</b> <input type="email" name="Correo" placeholder="ej correo@gmail.com " required class="formulario_input"></label>    
-                <br><h3><b>Seleccione una opcion donde podamos contactarlo</b></h3>
-                <label for=""> <input type="radio" name="Contacto" required class="formulario_input"><b>Correo</b></label>
-                <label for=""> <input type="radio" name="Contacto" required class="formulario_input"> <b>Telefono</b></label>
-                <br>
-                <br><label for=""><b>FECHA DE NACIMIENTO</b> <br><input type="date" name="fecha" required class="formulario_input"></label>
-                <br>
-                <br><label for=""><input type="submit" name="enviar" class="formulario_input"></label>
-            </form>
 
-            <!--Aqui usamos el "label" que es para nombrar lo que coloquemos en el input unicamente
-            #required minlength="10" lo usamos para limitar una cantidad de caracteres
-            #placeholder="ej correo@gmail.com para comentar un campo de un input, que cuando escribamos le salga como un comentario
-            #pattern="[0-9]+" esto para que ingrese solo numeros
-            #requiered es para que no envien datos vacios, le dice que es un campo obligatorio
-            -->
+            <form action="" class="formulario">
+                <label><b>NOMBRE</b><br>
+                    <input type="text" name="name" placeholder="Escribe tu nombre" required class="formulario_input">
+                </label>
+
+                <br><br>
+
+                <label><b>TELEFONO</b><br>
+                    <input type="tel" pattern="[0-9]+" name="Telefono1" placeholder="ej 3002666030" required minlength="10" class="formulario_input">
+                </label>
+
+                <br><br>
+
+                <label><b>CORREO</b><br>
+                    <input type="email" name="Correo" placeholder="ej correo@gmail.com" required class="formulario_input">
+                </label>
+
+                <br>
+
+                <h3><b>Seleccione una opcion donde podamos contactarlo</b></h3>
+
+                <label>
+                    <input type="radio" name="Contacto" required class="formulario_input"> Correo
+                </label>
+
+                <label>
+                    <input type="radio" name="Contacto" required class="formulario_input"> Telefono
+                </label>
+
+                <br><br>
+
+                <label><b>FECHA DE NACIMIENTO</b><br>
+                    <input type="date" name="fecha" required class="formulario_input">
+                </label>
+
+                <br><br>
+
+                <input type="submit" name="enviar" class="formulario_input">
+            </form>
         </section>
-        </div>
+    </div>
 
 </body>
 </html>
