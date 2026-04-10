@@ -70,6 +70,20 @@ div {
     border-radius: 10px;
 }
 
+.texto2{
+    background: #e5e7eb; 
+    max-width: 1000px;
+    width: 100%;
+    padding: 30px;
+    margin: 20px auto;
+    text-align: justify;
+    border-radius: 10px;
+}
+
+h2{
+    text-align: center;
+}
+
 /* NAV */
 .header .nav_links {
     list-style: none;
@@ -112,6 +126,18 @@ div {
     transform: scale(1.1);
 }
 
+.header .nav_links .inicio{
+    font-weight: 600;
+    color: #e5e7eb; 
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block; 
+}
+
+.header .nav_links .inicio:hover{
+    transform: scale(1.1);
+    color: #60a5fa; 
+}
 /* TEXTO */
 strong {
     font-weight: bolder;
@@ -126,7 +152,6 @@ strong {
 /* INPUTS */
 .formulario_input {
     padding: 8px;
-    width: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -153,4 +178,43 @@ strong {
 
 .cuadro_de_mi {
     text-align: center;
+}
+
+.cuadro_coment {
+    width: 80%;
+    height: 150px;
+}
+
+/* CONTENEDOR DE IMÁGENES */
+.contenedor_imagenes{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* importante para celular */
+    margin-top: 20px;
+}
+
+/* TARJETAS */
+.tarjeta{
+    text-align: center;
+}
+
+/* IMÁGENES */
+.tarjeta img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+/* EFECTO HOVER */
+.tarjeta img:hover{
+    transform: scale(1.05);
+}
+
+/* TEXTO */
+.tarjeta p{
+    margin-top: 10px;
+    font-weight: 600;
 }
