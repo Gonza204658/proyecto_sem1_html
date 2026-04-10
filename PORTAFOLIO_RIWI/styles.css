@@ -1,61 +1,156 @@
-body{
-    background: bisque;
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Archivo Narrow", sans-serif;
+    font-size: 20px;
+}
+
+body {
+    background: #f5f5f5; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.texto{
-    background: rgb(206, 196, 192);
-    width: 1000px;
-    height: 40px;
-    padding: 30px;
-    text-align: justify;
-    justify-content: center;
+
+/* HEADER */
+.header .logo{
+    cursor: pointer;
 }
 
-.texto1 {
-    background: rgb(204, 181, 181);
-    width: 1000px; 
-    height: 150px;
-    padding: 30px;
-    justify-content: center;
+header{
+    background-color: #1f2937;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+
+    position: sticky; top: 0; 
+    backdrop-filter: blur(45px);
 }
 
-samp{
-    font-weight: bolder;
+/* LOGO */
+.header .logo img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s;
 }
 
+.header .logo img:hover {
+    transform: scale(1.1); 
+}
+
+/* TEXTO GENERAL */
 div {
     font-family: Arial, sans-serif;
     text-align: center;
 }
-.navegar{
-    color: rgb(0, 0, 0);
+
+/* SECCIONES */
+.texto {
+    background: #ffffff; 
+    max-width: 1000px;
+    width: 100%;
+    padding: 30px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.texto1 {
+    background: #e5e7eb; 
+    max-width: 1000px;
+    width: 100%;
+    padding: 30px;
+    margin: 20px auto;
+    text-align: justify;
+    border-radius: 10px;
+}
+
+/* NAV */
+.header .nav_links {
+    list-style: none;
+}
+
+.header .nav_links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .nav_links a{
+    font-weight: 600;
+    color: #e5e7eb; 
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header .nav_links li:hover{
+    transform: scale(1.1);
+}
+
+.header .nav_links li a:hover{
+    color: #60a5fa; 
+}
+
+/* BOTÓN */
+.header .navegar button{
+    font-weight: 700;
+    color: white;
+    padding: 9px 25px;
+    background: #3b82f6; 
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .navegar button:hover{
+    background-color: #2563eb;
+    transform: scale(1.1);
+}
+
+/* TEXTO */
+strong {
+    font-weight: bolder;
+}
+
+.navegar {
+    color: #111827;
     line-height: 1.4;
     letter-spacing: 1px;
-    text-align: justify;
-    
 }
 
+/* INPUTS */
 .formulario_input {
-    padding: 2px 5px;
+    padding: 8px;
     width: 300px;
-    justify-content: center;
-
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
+/* IMAGEN */
 .imagen {
-    text-align: justify;
-
-    text-align: center;
+    display: block;
+    margin: 20px auto;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
 }
 
+/* FORMULARIO */
 .FOR {
-    background-color: blueviolet;
+    background-color: #1f2937; 
+    color: white;
     padding: 30px;
-    width: 500px;
-    justify-content: center;
+    max-width: 500px;
+    margin: 30px auto;
+    border-radius: 10px;
 }
 
-.cuadro_de_mi{
 
-    justify-content: left;
+.cuadro_de_mi {
+    text-align: center;
 }
