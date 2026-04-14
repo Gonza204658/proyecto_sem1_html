@@ -218,3 +218,10 @@ strong {
     margin-top: 10px;
     font-weight: 600;
 }
+
+.logo_pestaña {
+    display: block;
+    max-width: 36px;
+    width: 85%;
+    border-radius: 36px;
+}
